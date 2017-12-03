@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fake_Mailer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,83 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="C13-8f-YAG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="375"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agF-gb-0Yd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6j-0r-K3p">
+                                        <rect key="frame" x="0.0" y="55" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GZo-Rj-ScI">
+                                        <rect key="frame" x="0.0" y="110" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Subject" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3n-t9-yhy">
+                                        <rect key="frame" x="0.0" y="165" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Body" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tp3-t1-lpF">
+                                        <rect key="frame" x="0.0" y="220" width="375" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="1l8-ji-eaS"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjQ-a8-cX1">
+                                        <rect key="frame" x="169.5" y="345" width="36" height="30"/>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="send:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4p1-hc-mKP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="R6j-0r-K3p" secondAttribute="trailing" id="0Qd-gS-msz"/>
+                                    <constraint firstAttribute="trailing" secondItem="GZo-Rj-ScI" secondAttribute="trailing" id="0bx-dD-PSo"/>
+                                    <constraint firstItem="R6j-0r-K3p" firstAttribute="leading" secondItem="C13-8f-YAG" secondAttribute="leading" id="70j-wt-UjO"/>
+                                    <constraint firstItem="g3n-t9-yhy" firstAttribute="leading" secondItem="C13-8f-YAG" secondAttribute="leading" id="DHX-fp-u5o"/>
+                                    <constraint firstItem="tp3-t1-lpF" firstAttribute="leading" secondItem="C13-8f-YAG" secondAttribute="leading" id="GSm-Zh-www"/>
+                                    <constraint firstAttribute="trailing" secondItem="g3n-t9-yhy" secondAttribute="trailing" id="HID-cd-Lbu"/>
+                                    <constraint firstAttribute="trailing" secondItem="agF-gb-0Yd" secondAttribute="trailing" id="Q4y-QH-fOL"/>
+                                    <constraint firstItem="agF-gb-0Yd" firstAttribute="leading" secondItem="C13-8f-YAG" secondAttribute="leading" id="Reh-NK-7vC"/>
+                                    <constraint firstItem="GZo-Rj-ScI" firstAttribute="leading" secondItem="C13-8f-YAG" secondAttribute="leading" id="fa2-4V-cW9"/>
+                                    <constraint firstAttribute="trailing" secondItem="tp3-t1-lpF" secondAttribute="trailing" id="fgf-ti-Ghe"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C13-8f-YAG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mxp-UJ-J4W"/>
+                            <constraint firstAttribute="trailing" secondItem="C13-8f-YAG" secondAttribute="trailing" id="rRF-Ax-DnK"/>
+                            <constraint firstItem="C13-8f-YAG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rcZ-lL-zND"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="body" destination="tp3-t1-lpF" id="cyd-Dq-Xlg"/>
+                        <outlet property="fromLab" destination="R6j-0r-K3p" id="uqJ-rE-ahF"/>
+                        <outlet property="from_name" destination="GZo-Rj-ScI" id="sDF-xi-swO"/>
+                        <outlet property="subjectLab" destination="g3n-t9-yhy" id="5Wb-mX-cjD"/>
+                        <outlet property="toLab" destination="agF-gb-0Yd" id="Rbf-Ph-hpI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3446925E003349BBC647DA33 /* Pods_Fake_Mailer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF098F73584E80D4737F7089 /* Pods_Fake_Mailer.framework */; };
 		7329C0471F82553A00221EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7329C0461F82553A00221EB2 /* AppDelegate.swift */; };
 		7329C0491F82553B00221EB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7329C0481F82553B00221EB2 /* ViewController.swift */; };
 		7329C04C1F82553B00221EB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7329C04A1F82553B00221EB2 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		7329C04D1F82553B00221EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7329C0501F82553B00221EB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7329C0521F82553B00221EB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B158A1BB1AC88DF238CC0B81 /* Pods-Fake Mailer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fake Mailer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fake Mailer/Pods-Fake Mailer.release.xcconfig"; sourceTree = "<group>"; };
+		CF098F73584E80D4737F7089 /* Pods_Fake_Mailer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fake_Mailer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF121156989232898B490B7C /* Pods-Fake Mailer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fake Mailer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fake Mailer/Pods-Fake Mailer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3446925E003349BBC647DA33 /* Pods_Fake_Mailer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				7329C0451F82553A00221EB2 /* Fake Mailer */,
 				7329C0441F82553A00221EB2 /* Products */,
+				F2E1D248568E674CD9850422 /* Pods */,
+				8097E9D82F724E5ACE473998 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "Fake Mailer";
 			sourceTree = "<group>";
 		};
+		8097E9D82F724E5ACE473998 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF098F73584E80D4737F7089 /* Pods_Fake_Mailer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2E1D248568E674CD9850422 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF121156989232898B490B7C /* Pods-Fake Mailer.debug.xcconfig */,
+				B158A1BB1AC88DF238CC0B81 /* Pods-Fake Mailer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7329C0551F82553B00221EB2 /* Build configuration list for PBXNativeTarget "Fake Mailer" */;
 			buildPhases = (
+				8CCC83E4B43125274556BC29 /* [CP] Check Pods Manifest.lock */,
 				7329C03F1F82553A00221EB2 /* Sources */,
 				7329C0401F82553A00221EB2 /* Frameworks */,
 				7329C0411F82553A00221EB2 /* Resources */,
+				0361A4E785AFF665674B1413 /* [CP] Embed Pods Frameworks */,
+				DE48AF1C99F630229748223B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +123,7 @@
 				TargetAttributes = {
 					7329C0421F82553A00221EB2 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2M54WCK3J8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -130,6 +158,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0361A4E785AFF665674B1413 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fake Mailer/Pods-Fake Mailer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fake Mailer/Pods-Fake Mailer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CCC83E4B43125274556BC29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fake Mailer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE48AF1C99F630229748223B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fake Mailer/Pods-Fake Mailer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7329C03F1F82553A00221EB2 /* Sources */ = {
@@ -260,9 +344,12 @@
 		};
 		7329C0561F82553B00221EB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF121156989232898B490B7C /* Pods-Fake Mailer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2M54WCK3J8;
 				INFOPLIST_FILE = "Fake Mailer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fakemailer.Fake-Mailer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,9 +359,12 @@
 		};
 		7329C0571F82553B00221EB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B158A1BB1AC88DF238CC0B81 /* Pods-Fake Mailer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2M54WCK3J8;
 				INFOPLIST_FILE = "Fake Mailer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fakemailer.Fake-Mailer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,6 +391,7 @@
 				7329C0571F82553B00221EB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
